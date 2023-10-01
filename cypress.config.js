@@ -2,6 +2,8 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   failOnStatusCode: false,
+  viewportWidth: 1366,
+  viewportHeight: 768,
   defaultCommandTimeout: 15000,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {

@@ -51,13 +51,8 @@ export class ElectronicsPage extends BasePage {
         return this.getElement(SELECTORS.basketPrice)
     }
 
-    clickFilter() {
-        this.getElement('[class="button button--navy button--small catalog-settings__filter-button ng-star-inserted"]').click()
-    }
-
-
     clickPrice() {
-        this.getElement('[data-filter-name="price"]').click({ multiple: true })
+        this.getElement('[data-filter-name="price"]').click({force: true})
     }
 
     addedPriceFilter(minPrice, maxPrice) {
@@ -66,10 +61,6 @@ export class ElectronicsPage extends BasePage {
             this.getElement('[formcontrolname="max"]').clear().type(maxPrice)
             this.getElement('[class="button button_color_gray button_size_small slider-filter__button"]').click()
         })
-    }
-
-    clickShowBTN() {
-        this.getElement('[class="button button--navy button--medium"]').click()
     }
 
     clickOnSearch() {

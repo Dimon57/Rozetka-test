@@ -47,14 +47,12 @@ describe('', () => {
         })
     })
 
-    it('Filtered price', () => {
+    it.only('Filtered price', () => {
         const minPrice = 20000
         const maxPrice = 30000
         electronics.clickPhoneCategory()
-        electronics.clickFilter()
         electronics.clickPrice()
         electronics.addedPriceFilter(minPrice, maxPrice)
-        electronics.clickShowBTN()
         cy.wait(5000)
         electronics.getElement(SELECTORS.phone).each((phone) => {
             electronics.getElement(phone).within(() => {
