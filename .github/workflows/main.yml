@@ -1,17 +1,21 @@
-name: Cypress Tests
+name: cron test
 
-on: 
+on:
+  repository_dispatch:
+  workflow_dispatch:
+
+#   schedule:
+#     - cron: '0 1 * * *'
 
 jobs:
-  cypress-run:
-    runs-on: ubuntu-22.04
+  cypress-e2e-chrome78-ff70:
+    name: Run on Chrome
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+      - uses: actions/checkout@v2
+      - name: install deps
+        run: npm install
       - name: Cypress run
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v2
         with:
-          build: npm run build
-          start: npm run smoke:test
+          command: npm run smoke:test
