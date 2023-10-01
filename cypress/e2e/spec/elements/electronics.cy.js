@@ -5,7 +5,7 @@ const electronics = new ElectronicsPage
 describe('', () => {
 
     beforeEach('', () => {
-        electronics.goto('/')
+        electronics.goto('telefony-tv-i-ehlektronika/c4627949/')
     })
 
     it('The phone has been added to the cart', () => {
@@ -13,7 +13,7 @@ describe('', () => {
         electronics.clickIPhone()
         electronics.clickBuyBTN()
 
-        electronics.getElement(SELECTORS.windowBasket).should('have.text', 'Мобільний телефон Apple iPhone 13 128GB Midnight (MLPF3HU/A)')
+        electronics.getElement(SELECTORS.windowBasket).should('have.text', 'Мобільний телефон Apple iPhone 15 128GB Black (MTP03RX/A)')
     })
 
     it('The TV has been added to the cart', () => {
@@ -21,7 +21,7 @@ describe('', () => {
         electronics.clickTV()
         electronics.clickBuyBTN()
 
-        electronics.getElement(SELECTORS.windowBasket).should('have.text', 'Телевізор LG 43UQ75006LF')
+        electronics.getElement(SELECTORS.windowBasket).should('have.text', 'Телевізор Samsung QE55Q60CAUXUA')
     })
 
     it('Item removed from cart', () => {

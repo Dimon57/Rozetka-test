@@ -16,7 +16,7 @@ export class ElectronicsPage extends BasePage {
     }
 
     clickIPhone() {
-        this.getElement('[data-goods-id="318463663"]').click()
+        this.getElement('[data-goods-id="395460480"]').click()
     }
 
     clickBuyBTN() {
@@ -32,7 +32,7 @@ export class ElectronicsPage extends BasePage {
     }
 
     clickTV() {
-        this.getElement('[data-goods-id="351475899"]').click()
+        this.getElement('[data-goods-id="373026732"]').click()
     }
 
     clickMenuDeleteBTN() {
