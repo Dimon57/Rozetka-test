@@ -47,7 +47,7 @@ describe('', () => {
         })
     })
 
-    it.only('Filtered price', () => {
+    it('Filtered price', () => {
         const minPrice = 20000
         const maxPrice = 30000
         electronics.clickPhoneCategory()
