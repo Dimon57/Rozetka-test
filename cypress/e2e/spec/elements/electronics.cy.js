@@ -5,7 +5,7 @@ const electronics = new ElectronicsPage
 describe('', () => {
 
     beforeEach('', () => {
-        electronics.goto('t/')
+        electronics.goto('/')
     })
 
     it('The phone has been added to the cart', () => {
