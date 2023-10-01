@@ -5,7 +5,7 @@ const electronics = new ElectronicsPage
 describe('', () => {
 
     beforeEach('', () => {
-        electronics.goto('telefony-tv-i-ehlektronika/c4627949/')
+        electronics.goto('t/')
     })
 
     it('The phone has been added to the cart', () => {
