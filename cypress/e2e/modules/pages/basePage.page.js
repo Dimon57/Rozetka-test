@@ -1,6 +1,6 @@
 export class BasePage {
 
-    egoto(page) {
+    goto(page) {
         cy.visit('https://rozetka.com.ua/' + page)
     }
     getElement(element) {
